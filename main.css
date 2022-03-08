@@ -73,4 +73,8 @@ table td:first-child {
 }
 table th:last-child,
 table td:last-child {
-    margin-bottom: 0;
+margin-bottom: 0;}
+
+ul {
+   list-style: disc;
+}
