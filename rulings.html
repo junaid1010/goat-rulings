@@ -3,26 +3,56 @@
     
 <head>
   <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-  <link href="dark-theme.css" rel="stylesheet" id="theme-link">
-  <link href="assets/fontawesome/css/all.css" rel="stylesheet">
-  <script src="jscripts/toggledark.js" type="text/javascript"></script>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- <script src="jscripts/toggledark.js" type="text/javascript"></script> -->
+<script src="bootstrap/js/bootstrap.bundle.js"></script>
+<style>
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+a:hover { color: #32afbf !important; }
+button {background-color: #4232bf !important;}
+button {border-color:#4232bf !important; }
+button:hover { background-color: #32afbf !important; }
+body {line-height:1.6 !important; font-size:17px !important;}
+</style>
   <title>Rulings</title>
+
 </head>
-
 <body>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  
-  <div class="topnav" id="myTopnav">
-    <a href="index.html">Home</a>
-    <a class="active"  href="rulings.html">Rulings</a>
-    <a href="contact.html">Contact/FAQ</a>
-    <a href="https://github.com/TheMTtakeover/goat-rulings" target="_blank">GitHub</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-  <h3 id='individual-card-rulings'>Individual Card Rulings </h3>
-
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GoatRulings</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="rulings.html">Rulings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/TheMTtakeover/goat-rulings">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <!-- Back to top button -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">Top</button>
+  <div class="bg-dark text-white px-2 px-sm-3 px-md-4 px-lg-5">
+  <br>
+  <h3 id='individual-card-rulings'>Card Rulings </h3>
+  <br>
   <h4 id='3-hump-lacoodaa-id3-hump-lacoodaa'>3-HUMP LACOODA<a id="3-HUMP LACOODA"></a></h4>
   <p>Individual Card FAQs:</p>
   <ul>
@@ -33,12 +63,14 @@
     <li>If your opponent chains &quot;Ring of Destruction&quot; or &quot;Book of Moon&quot; to the activation of &quot;3-Hump Lacooda&quot;&#39;s effect, the effect is not negated.</li>
     <li>If you Summon your third &quot;3-Hump Lacooda&quot;, you can activate its effect before your opponent activates &quot;Torrential Tribute&quot;.</li>
   </ul>
+  <br>
   
   <h4 id='4-starred-ladybug-of-dooma-id4-starred-ladybug-of-dooma'>4-STARRED LADYBUG OF DOOM<a id="4-STARRED LADYBUG OF DOOM"></a></h4>
   <p>Netrep Rulings:</p>
   <ul>
     <li>4-Starred Ladybug of Doom destroys monsters that are Level 4 at the time “4-Starred Ladybug of Doom” resolves.</li>
   </ul>
+  <br>
 
   <h4 id='7a-id7a'>7<a id="7"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -50,6 +82,7 @@
     <li>If other cards are also sent to the Graveyard at the same time, like &quot;Sangan&quot; or &quot;Black Pendant&quot;, the card controlled by the turn player is Step 1.</li>
     <li>If your 3rd &quot;7&quot; is activated, but destroyed by &quot;Mystical Space Typhoon&quot; in a chain, you can&#39;t activate its effect, but you still gain 700 Life Points for its Graveyard effect.</li>
   </ul>
+  <br>
 
   <h4 id='7-completeda-id7-completeda'>7 COMPLETED<a id="7 COMPLETED"></a></h4>
   <p>Netrep Rulings:</p>
@@ -58,6 +91,7 @@
     <li>If “7 Completed” is equipped to another legal target by “Fairy’s Hand Mirror,” the choice of increasing ATK or DEF by the effect of “7 completed” does not change.</li>
     <li>If “7 Completed” is equipped to another legal target by “Tailor of the Fickle,” the choice of increasing ATK or DEF by the effect of “7 Completed” does not change.</li>
   </ul>
+  <br>
 
   <h4 id='8-claws-scorpiona-id8-claws-scorpiona'>8-CLAWS SCORPION<a id="8-CLAWS SCORPION"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -66,6 +100,7 @@
     <li>The effect of &quot;8-Claws Scorpion&quot; is a Trigger Effect that is applied if the condition is correct on activation (&quot;8-Claws Scorpion&quot; declared an attack against a face-down Defense Position monster.) The target monster does not have to be in face-down Defense Position when the effect of &quot;8-Claws Scorpion&quot; is resolved. So if &quot;Final Attack Orders&quot; is active, or &quot;Ceasefire&quot; flips the monster face-up, &quot;8-Claws Scorpion&quot; still gets its 2400 ATK.</li>
     <li>The ATK of &quot;8-Claws Scorpion&quot; becomes 2400 during damage calculation. You cannot chain &quot;Rush Recklessly&quot; or &quot;Blast with Chain&quot; to this effect. If these cards were activated before damage calculation, then the ATK of &quot;8-Claws Scorpion&quot; becomes 2400 during damage calculation so those cards have no effect on its ATK.</li>
   </ul>
+  <br>
 
   <h4 id='a-cat-of-ill-omena-ida-cat-of-ill-omena'>A CAT OF ILL OMEN<a id="A CAT OF ILL OMEN"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -80,6 +115,7 @@
     <li>Q: If “Pharaoh’s Treasure” has been successfully placed in the Deck face-up, can the effect of “A Cat of Ill Omen” be used to place it on top of the Deck?<br>
     A: Yes you can. The “Pharaoh’s Treasure” would be placed on top of your Deck. Its effect will activate when it is drawn. But if there is a “Necrovalley” face-up on the field, the “Pharaoh’s Treasure” would be added to your hand right away and would NOT activate its effect (because it isn’t drawn). Curtis Schultz, 04/07/2004</li>
   </ul>
+  <br>
 
   <h4 id='a-deal-with-dark-rulera-ida-deal-with-dark-rulera'>A DEAL WITH DARK RULER<a id="A DEAL WITH DARK RULER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -97,6 +133,7 @@
     <li>If the summon of a Level 8 or higher monster is negated, “A Deal with Dark Ruler” may not be activated for that monster.</li>
     <li>&quot;A Deal with Dark Ruler” may be activated in the End Phase, or the Battle Phase, but cannot be activated in the Damage Step.</li>
   </ul>
+  <br>
 
   <h4 id='a-feather-of-the-phoenixa-ida-feather-of-the-phoenixa'>A FEATHER OF THE PHOENIX<a id="A FEATHER OF THE PHOENIX"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -106,6 +143,7 @@
     <li>Discarding 1 card is a cost to activate this effect. Your opponent can chain “Disappear” to the activation of this card and remove the discarded card from play so that you cannot return it to the top of the Deck.</li>
     <li>This is an effect that targets.</li>
   </ul>
+  <br>
 
   <h4 id='a-feint-plana-ida-feint-plana'>A FEINT PLAN<a id="A FEINT PLAN"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -118,6 +156,7 @@
     <li>If “A Feint Plan” is activated in response to an opponent’s declaration of an Attack on a face-down monster, that attack will resolve normally.</li>
     <li>If all of a player’s monsters are face-down in the turn that “A Feint Plan” is activated, the opponent may not attack directly, unless the attacking monster can inherently attack directly, such as “Inaba White Rabbit,” “Jinzo #7,” a monster equipped with “Shooting Star Bow – Ceal”, or Toons.</li>
   </ul>
+  <br>
 
   <h4 id='a-hero-emergesa-ida-hero-emergesa'>A HERO EMERGES<a id="A HERO EMERGES"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -134,6 +173,7 @@
   <li>Guardian Monster without appropriate Spell Card on the field: sent to the Graveyard. (Guardian Grarl, Guardian Ceal, Guardian Tryce, etc.)</li>
   <li>The effect of “A Hero Emerges” causes a replay.</li>
   </ul>
+  <br>
 
   <h4 id='a-legendary-oceana-ida-legendary-oceana'>A LEGENDARY OCEAN<a id="A LEGENDARY OCEAN"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -156,6 +196,7 @@
   <li>“A Legendary Ocean” is not a valid choice for the effect of “Prohibition.”</li>
   <li>While “The Legendary Fisherman” is face-up on the field and active while “A Legendary Ocean” is face up on the field, “The Legendary Fisherman” will be a 5 Star Monster as it is unaffected by Spell Cards, including “A Legendary Ocean.”</li>
   </ul>
+  <br>
 
   <h4 id='a-man-with-wdjata-ida-man-with-wdjata'>A MAN WITH WDJAT<a id="A MAN WITH WDJAT"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -165,6 +206,7 @@
   <li>Netrep Rulings:</li>
   <li>If “A Man with Wdjat” is not Normal Summoned, none of its effect will apply. This includes the ‘during each of your following Standby Phases’ text.</li>
   </ul>
+  <br>
 
   <h4 id='a-rival-appearsa-ida-rival-appearsa'>A RIVAL APPEARS!<a id="A RIVAL APPEARS!"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -173,6 +215,7 @@
   <li>If the opponent’s monster is face-down or not on the field when “A Rival Appears!” resolves, then its effect disappears.</li>
   <li>If you do not have a monster of the same level as the target, you cannot activate “A Rival Appears!”</li>
   </ul>
+  <br>
 
   <h4 id='a-wingbeat-of-giant-dragona-ida-wingbeat-of-giant-dragona'>A WINGBEAT OF GIANT DRAGON<a id="A WINGBEAT OF GIANT DRAGON"></a></h4>
   <p>Netrep Rulings:</p>
@@ -183,6 +226,7 @@
   <li>“A Wingbeat of Giant Dragon” targets the monster it returns to the hand. The ‘return one Level 5 or higher Dragon-Type’ is not a cost of activation.</li>
   <li>“A Wingbeat of a Giant Dragon” may not be activated while “Lord of D.” is active on the field.</li>
   </ul>
+  <br>
 
   <h4 id='abare-ushionia-idabare-ushionia'>ABARE USHIONI<a id="ABARE USHIONI"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -190,6 +234,7 @@
   <li>If you call the coin toss wrong for “Abare Ushioni” you can still prevent the damage with “Pikeru’s Circle of Enchantment”, etc.</li>
   <li>You cannot chain “Barrel Behind the Door” to the effect of “Abare Ushioni” because you don’t know yet if you will take damage or not from the effect.</li>
   </ul>
+  <br>
 
   <h4 id='absolute-enda-idabsolute-enda'>ABSOLUTE END<a id="ABSOLUTE END"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -197,18 +242,21 @@
   <li>When &quot;Absolute End&quot; is activated during an attack, that attack becomes a direct attack.</li>
   <li>If &quot;Taunt&quot; and &quot;Absolute End&quot; are both active, the attack becomes a direct attack to your Life Points. This is because the attack target is the monster selected by &quot;Taunt&quot;, but then &quot;Absolute End&quot; turns it into a direct attack.</li>
   </ul>
+  <br>
 
   <h4 id='absorbing-kid-from-the-skya-idabsorbing-kid-from-the-skya'>ABSORBING KID FROM THE SKY<a id="ABSORBING KID FROM THE SKY"></a></h4>
   <ul>
   <li>Individual Card FAQs:</li>
   <li>The Level is the original Level printed on the card.</li>
   </ul>
+  <br>
 
   <h4 id='abyssal-designatora-idabyssal-designatora'>ABYSSAL DESIGNATOR<a id="ABYSSAL DESIGNATOR"></a></h4>
   <p>Individual Card FAQs:</p>
   <ul>
   <li>If your opponent sends a monster to the Graveyard with the declared Type and Attribute, you cannot see their hand and Deck. But if they claim to have no such card, you can check their hand and Deck to confirm.</li>
   </ul>
+  <br>
 
   <h4 id='acid-trap-holea-idacid-trap-holea'>ACID TRAP HOLE<a id="ACID TRAP HOLE"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -224,6 +272,7 @@
   <li>Q: What happens if I activate “Acid Trap Hole” in the Battle Step of a Battle Phase? Would I resolve the Flip Effect in the damage step? Could I Chain to the Flip Effect in this case?<br>
   A: The Flip Effect would start a new Chain in the Battle Step. You can respond to it with appropriate card effects. Curtis Schultz, 04/22/2004</li>
   </ul>
+  <br>
 
   <h4 id='adhesion-trap-holea-idadhesion-trap-holea'>ADHESION TRAP HOLE<a id="ADHESION TRAP HOLE"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -235,6 +284,7 @@
   <li>&quot;Adhesion Trap Hole&quot; halves the original ATK, so if you activate another effect that alters ATK, halve the original ATK first and then resolve the other ATK-modifying effect.</li>
   <li>If a monster affected by &quot;Adhesion Trap Hole&quot; is then equipped with &quot;Megamorph&quot;, only &quot;Megamorph&quot;&#39;s effect applies.</li>
   </ul>
+  <br>
 
   <h4 id='after-the-struggle-fka-after-genocidea-idafter-the-strugglea'>AFTER THE STRUGGLE (f.k.a. AFTER GENOCIDE)<a id="AFTER THE STRUGGLE"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -248,6 +298,7 @@
   <ul>
   <li>Monsters that have had their attacks negated are not destroyed by the effect of “After the Struggle.”</li>
   </ul>
+  <br>
 
   <h4 id='agidoa-idagidoa'>AGIDO<a id="AGIDO"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -256,6 +307,7 @@
   <li>&quot;Agido&quot;&#39;s effect does not target.</li>
   <li>While &quot;Necrovalley&quot; is active, the effect of &quot;Agido&quot; will activate, but will be negated.</li>
   </ul>
+  <br>
 
   <h4 id='airknight-parshatha-idairknight-parshatha'>AIRKNIGHT PARSHATH<a id="AIRKNIGHT PARSHATH"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -264,6 +316,7 @@
   <li>If the opponent activates &quot;Waboku&quot; or &quot;Kuriboh&quot; to reduce the Battle Damage to 0, you do not draw.</li>
   <li>When &quot;Airknight Parshath&quot; attacks a face-down monster with a Flip Effect and inflicts Battle Damage, you draw 1 card before the Flip Effect is applied.</li>
   </ul>
+  <br>
 
   <h4 id='altar-for-tributea-idaltar-for-tributea'>ALTAR FOR TRIBUTE<a id="ALTAR FOR TRIBUTE"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -280,6 +333,7 @@
   <li>Sending a monster to the Graveyard is an activation cost for “Altar for Tribute.”</li>
   <li>If “Banisher of the Light” is active on the field when “Altar for Tribute” resolves, the player who activates “Altar for Tribute” will not gain Life Points as the monster does not go to the Graveyard.</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-archersa-idamazoness-archersa'>AMAZONESS ARCHERS<a id="AMAZONESS ARCHERS"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -303,6 +357,7 @@
   <li>If a Replay occurs after “Amazoness Archers” has been activated, the affected player must still attack with all appropriate monsters.</li>
   <li>If “Thousand Eyes Restrict” is face-up on the field when “Amazoness Archers” is activated, only the “Thousand Eyes Restrict” may attack, provided it is the opponent’s monster. If “Thousand Eyes Restrict” is destroyed in that attack, then the other appropriate opponent’s monsters must attack.</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-blowpipera-idamazoness-blowpipera'>AMAZONESS BLOWPIPER<a id="AMAZONESS BLOWPIPER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -317,6 +372,7 @@
   <li>Q: Can “Amazoness Blowpiper’s” effect be used more than once per turn?<br>
   A: As per the card text, it says you use the effect once during each of your Standby phases. That is the only time the effect is used. Curtis Schultz, 12/08/2003</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-chain-mastera-idamazoness-blowpipera'>AMAZONESS CHAIN MASTER<a id="AMAZONESS BLOWPIPER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -334,6 +390,7 @@
   <li>If you acquired your opponent’s monster with “Amazoness Chain Master”, and “Remove Brainwashing” is activated, the monster returns to the original owner if it is on the field. However, if it’s still in your hand then it is not returned.</li>
   <li>If you acquire your opponent’s monster with “Amazoness Chain Master” and your opponent uses “Lightforce Sword” on it, it returns to your hand (not the owner’s hand) after the effect of “Lightforce Sword” expires.</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-fightera-idamazoness-fightera'>AMAZONESS FIGHTER<a id="AMAZONESS FIGHTER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -345,12 +402,14 @@
   <li>Netrep Rulings:</li>
   <li>“Amazoness Fighter” reduces overflow Battle Damage from the monster that battles it to 0. If “Amazoness Fighter” would be destroyed by battle, it is still destroyed and sent to the Graveyard.</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-paladina-idamazoness-paladina'>AMAZONESS PALADIN<a id="AMAZONESS PALADIN"></a></h4>
   <p>Individual Card FAQs:</p>
   <ul>
   <li>&quot;Amazoness Paladin&quot; counts herself in her effect, so even by herself she gains +100 ATK.</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-spellcastera-idamazoness-spellcastera'>AMAZONESS SPELLCASTER<a id="AMAZONESS SPELLCASTER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -361,6 +420,7 @@
   <li>If you switch ATKs with &quot;Amazoness Spellcaster&quot;, and one of the monsters is equipped with &quot;Megamorph&quot;, after the switch, you change the ATK of the monster that is equipped with &quot;Megamorph&quot; using the effect of &quot;Megamorph&quot;.</li>
   <li>With &quot;Shield &amp; Sword&quot;, since these are both Normal Spell Cards, you resolve them in the order of their activation, and recalculate their ATKs in that order.</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-swords-womana-idamazoness-swords-womana'>AMAZONESS SWORDS WOMAN<a id="AMAZONESS SWORDS WOMAN"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -379,6 +439,7 @@
   <li>If “Amazoness Swords Woman” battles a monster whose field is protected by “Tornado Wall,” “Tornado Wall’s” effect of reducing Battle Damage to 0 also applies to the redirected Battle Damage from “Amazoness Swords Woman.”</li>
   <li>If “Amazoness Swords Woman” battles a monster whose field is protected by “Waboku,” “Waboku’s” effect of reducing Battle Damage to 0 also applies to the redirected Battle Damage from “Amazoness Swords Woman.”</li>
   </ul>
+  <br>
 
   <h4 id='amazoness-tigera-idamazoness-tigera'>AMAZONESS TIGER<a id="AMAZONESS TIGER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -400,6 +461,7 @@
   <li>Q: What would happen if a second “Amazoness Tiger” is flipped due to an attack?</li>
   <li>A: The second one would be destroyed after Damage Calculation in the Damage Step, even if it survives the attack. Curtis Schultz, 12/10/2003</li>
   </ul>
+  <br>
 
   <h4 id='amebaa-idamebaa'>AMEBA<a id="AMEBA"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -411,6 +473,7 @@
   <ul>
   <li>The effect of “Ameba” does not activate when control of “Ameba” changes while “Ameba” is face-down.</li>
   </ul>
+  <br>
 
   <h4 id='amphibious-bugroth-mk-3a-idamphibious-bugroth-mk-3a'>AMPHIBIOUS BUGROTH MK-3<a id="AMPHIBIOUS BUGROTH MK-3"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -424,6 +487,7 @@
   <li>If “Umi” is face-up, but negated, “Amphibious Bugroth MK-3” may still attack directly.</li>
   <li>If “Umi” is destroyed or removed from the field as a response to the declaration of an attack by “Amphibious Bugroth MK-3”, a replay is triggered.</li>
   </ul>
+  <br>
 
   <h4 id='amplifiera-idamplifiera'>AMPLIFIER<a id="AMPLIFIER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -438,6 +502,7 @@
   <li>If your &quot;Amplifier&quot; is switched from your &quot;Jinzo&quot; to your opponent&#39;s &quot;Jinzo&quot; with &quot;Tailor of the Fickle&quot;, then your Jinzo is not destroyed.</li>
   <li>You cannot activate a card that would cause an infinite loop because its effect cannot resolve completely. Example #1: You activate &quot;Snatch Steal&quot; targeting your opponent&#39;s &quot;Jinzo&quot;. You then equip &quot;Jinzo&quot; with &quot;Amplifier&quot;. You cannot activate &quot;Imperial Order&quot; because it cannot resolve completely (it would negate &quot;Snatch Steal&quot;, returning &quot;Jinzo&quot; to your opponent, which would negate &quot;Imperial Order&quot; so &quot;Snatch Steal&quot; would re-activate). If you activate &quot;Imperial Order&quot; by mistake in such a situation, flip it face-down again. Example #2: you control &quot;Jinzo&quot; equipped with &quot;Amplifier&quot; and &quot;Skill Drain&quot;. Your opponent cannot activate &quot;Royal Decree&quot;.</li>
   </ul>
+  <br>
 
   <h4 id='an-owl-of-lucka-idan-owl-of-lucka'>AN OWL OF LUCK<a id="AN OWL OF LUCK"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -447,6 +512,7 @@
   <li>If &quot;Mystical Space Typhoon&quot; is chained to the effect to destroy &quot;Necrovalley&quot;, so that &quot;Necrovalley&quot; is not on the field when this effect resolves, you cannot place the card in your hand.</li>
   <li>You select the card for this effect when the effect resolves, not when it activates.</li>
   </ul>
+  <br>
 
   <h4 id='ancient-gear-beasta-idancient-gear-beasta'>ANCIENT GEAR BEAST<a id="ANCIENT GEAR BEAST"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -456,6 +522,7 @@
   <li>The effect of “Ancient Gear Beast” that prevents your opponent from activating Spell or Trap Cards is a Continuous Effect. It cannot be chained to. “Divine Wrath” cannot be activated against it.</li>
   <li>If “Ancient Gear Beast” attacks, and is destroyed before the end of the Damage Step, its effect is no longer applied after it is destroyed, even if it is still on the field and has not yet been sent to the Graveyard. (A Continuous Effect is no longer applied after the monster generating it has been destroyed, even if the monster is still on the field.) The effect of “Ancient Gear Beast” is applied up until the point it is destroyed, though.</li>
   </ul>
+  <br>
 
   <h4 id='ancient-gear-golema-idancient-gear-golema'>ANCIENT GEAR GOLEM<a id="ANCIENT GEAR GOLEM"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -464,18 +531,21 @@
   <li>The effect of “Ancient Gear Golem” that prevents your opponent from activating Spell or Trap Cards is a Continuous Effect. It cannot be chained to. “Divine Wrath” cannot be activated against it.</li>
   <li>If “Ancient Gear Golem” attacks, and is destroyed before the end of the Damage Step, its effect is no longer applied after it is destroyed, even if it is still on the field and has not yet been sent to the Graveyard. (A Continuous Effect is no longer applied after the monster generating it has been destroyed, even if the monster is still on the field.) The effect of “Ancient Gear Golem” is applied up until the point it is destroyed, though.</li>
   </ul>
+  <br>
 
   <h4 id='ancient-telescopea-idancient-telescopea'>ANCIENT TELESCOPE<a id="ANCIENT TELESCOPE"></a></h4>
   <p>Netrep Rulings:</p>
   <ul>
   <li>The Deck is not shuffled after the effect of “Ancient Telescope” resolves.</li>
   </ul>
+  <br>
 
   <h4 id='andro-sphinxa-idandro-sphinxa'>ANDRO SPHINX<a id="ANDRO SPHINX"></a></h4>
   <p>Individual Card FAQs:</p>
   <ul>
   <li>This card’s effect which allows you to Special Summon it is a Spell Speed 1 effect that you can only activate during your Main Phase 1 or 2.</li>
   </ul>
+  <br>
 
   <h4 id='antea-idantea'>ANTE<a id="ANTE"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -489,6 +559,7 @@
   <li>Netrep Rulings:</li>
   <li>If “Cost Down” has successfully resolved before “Ante” resolves, the monster chosen by the player who activated “Cost Down” is reduced by 2 Level Stars as per the effect of “Cost Down.”</li>
   </ul>
+  <br>
 
   <h4 id='anti-aircraft-flowera-idanti-aircraft-flowera'>ANTI-AIRCRAFT FLOWER<a id="ANTI-AIRCRAFT FLOWER"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -499,12 +570,14 @@
   <ul>
   <li>Monsters changed to Insect-Type by the effect of “DNA Surgery” may be Tributed for the effect of “Anti-Aircraft Flower.”</li>
   </ul>
+  <br>
 
   <h4 id='anti-spella-idanti-spella'>ANTI-SPELL<a id="ANTI-SPELL"></a></h4>
   <p>Individual Card FAQs:</p>
   <ul>
   <li>Removing 2 Spell Counters is a cost.</li>
   </ul>
+  <br>
 
   <h4 id='anti-spell-fragrancea-idanti-spell-fragrancea'>ANTI-SPELL FRAGRANCE<a id="ANTI-SPELL FRAGRANCE"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -517,6 +590,7 @@
   <li>Field Spell Cards must be Set for one turn if “Anti-Spell Fragrance” is active.</li>
   <li>Spell Cards that were Set for one turn before “Anti-Spell Fragrance” was active may be activated.</li>
   </ul>
+  <br>
 
   <h4 id='apprentice-magiciana-idapprentice-magiciana'>APPRENTICE MAGICIAN<a id="APPRENTICE MAGICIAN"></a></h4>
   <p>Individual Card FAQs:</p>
@@ -9872,9 +9946,35 @@
   <p>Netrep Q&amp;As:</p>
   <p>Q: Will “Zombyra the Dark&#39;s” attack decrease from the modified ATK caused by “Adhesion Trap Hole” (1050), or will it decrease from the original ATK (2100) and then the effect from “Adhesion Trap Hole” take effect each time it destroys a monster. i.e., “Zombyra the Dark” destroys a monster. Is its ATK now 850 or 950?</p>
   <p>A: “Adhesion Trap Hole” will only cause the original ATK of the monster to be halved. So in “Zombyra the Dark&#39;s” case, “Adhesion Trap Hole” will cause it to be at 1050 ATK after being summoned. Then, “Zombyra the Dark&#39;s” effect will cause it to lose 200 ATK points each time it destroys a monster. After destroying 1 monster, “Zombyra the Dark&#39;s” ATK value will be 850. Steve Okegawa, 12/06/2003</p>
+  </div>
+  
+  <script>
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
 
-  <script src="jscripts/jumptotop.js"></script>
-  <script src="jscripts/mobilenav.js"></script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 </body>
 </html>
